@@ -1,0 +1,9 @@
+
+.product-header{
+    padding: 15px;
+    background: linear-gradient(-180deg, rgba(0, 0, 0, 0.154), transparent);
+    border: 1.5px solid white;
+    text-align: center;
+    font-size: x-large !important;
+
+}

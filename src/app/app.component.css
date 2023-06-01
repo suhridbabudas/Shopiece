@@ -1,0 +1,49 @@
+body {
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: -24px;
+  }
+  
+  #page-content {
+    flex: 1 0 auto;
+  }
+  
+  /* Other Classes for Page Styling */
+  
+  body {
+    background: #007bff;
+    background: linear-gradient(to bottom, #ffffff, rgb(120, 120, 120));
+  }
+
+  #drop{
+    left: -131px !important;
+    top: 54px;
+    border: 1px solid black;
+    background: aliceblue;
+  }
+  .adjust{
+    text-align: center;
+    font-size: small;
+    padding: 8px;
+    /* border-top: 1px solid dimgrey; */
+    margin: 5px;
+    background: linear-gradient(177deg, #00000033, #ffffff00);
+    color: black;
+    width: 180px;
+    margin-top: -3px;
+    height: 145px;
+  }
+
+  .custom{
+    
+    display: flex !important;
+    margin-right: -1px;
+  }
+  .custom:hover{
+    border: 0px !important;
+
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0),rgba(0, 0, 0, 0.109));
+
+  }

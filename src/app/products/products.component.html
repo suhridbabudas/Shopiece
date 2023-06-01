@@ -1,0 +1,60 @@
+<div class="container">
+  <header class="modal-header">
+    <h2>Our Products!</h2>
+    <div>
+      <label for="">Catagory &nbsp;</label>
+      <select >
+        <option value=""></option>
+      </select>
+    </div>
+  </header>
+  <div class="container-fluid">
+    <div
+      class="card container mt-2 mb-2 p-2"
+      style="background-color: rgba(0, 0, 0, 0.107); border: 0px;"
+      
+    >
+      <div class="row" >
+        <div
+          class="col-lg-3 mt-1"
+          *ngFor="
+            let product of products
+              | paginate
+                : {
+                    itemsPerPage: itemsPerPage,
+                    currentPage: currentpage,
+                    totalItems: totalItems
+                  }
+          "
+        >
+          <div class="card" style="width: 17rem;height: 544px; margin-left: -12px" >
+            <img
+              class="card-img-top"
+              src="{{product.ProductImageUrl}}"
+              height="200px"
+              width="100%"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="height: 50px;border-bottom: 1px solid rgba(128, 128, 128, 0.389);">{{product.Name}}</h5>
+              <p class="card-text" style="height: 150px;border-bottom: 1px solid rgba(128, 128, 128, 0.389);">
+                {{product.Description}}
+              </p>
+              <p class="card-text" style="height: 50px;">
+                Price : {{product.Price | currency:'USD'}}
+              </p>
+              <a class="btn btn-sm border border-primary" (click)="onProductDetails(product.id)"
+                >Go to Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div align="center" >
+    <pagination-controls 
+  (pageChange)="currentpage = $event"
+></pagination-controls>
+</div>
+</div>

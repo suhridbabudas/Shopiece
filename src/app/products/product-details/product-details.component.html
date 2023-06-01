@@ -1,0 +1,46 @@
+<div class="container-fluid mt-4 bg-light" style="padding: 10px;">
+    <div class="product-header">
+        <h5 class="text text-bold text-dark" >{{ selectedProduct.Name }}</h5>
+    </div>
+    <div class="container mt-4 ">
+        <div class="row">
+          <div class="col-lg-6 " >
+            <div class="card " style="background: linear-gradient(-180deg,  transparent, rgba(0, 0, 0, 0.365)); border: 0px;">
+              <img
+                class="card-img-top"
+                src="{{ selectedProduct.ProductImageUrl }}"
+                alt="Card image cap"
+                height="296px"
+                width="100%"
+                
+              />
+            </div>
+          </div>
+          <div class="col-lg-6" >
+            <div class="card" style="background: linear-gradient(-180deg,  transparent, rgba(0, 0, 0, 0.365));border: 0px">
+              <div class="card-body ">
+                <h5 class="card-title">BrandName: {{ selectedProduct.Brands.BrandName }}</h5>
+                <small>Deacription: </small>
+                <p class="card-text">
+                  Description: {{ selectedProduct.Description }}
+                </p>
+              </div>
+              <div class="card-body" style="height: 160px;">
+                <div class="card-text">
+                  <div class="form-group">
+                      Product quantity: <button class="btn btn-sm btn-danger">-</button>&nbsp;
+                      <input type="text" value="1" style="width: 30px;"/>&nbsp;
+                      <button class="btn btn-sm btn-success">+</button>
+                  </div>
+              </div>
+              <hr>
+                <p class="card-text">Price: {{ selectedProduct.Price | currency : "USD" }}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>&nbsp;
+                <a href="#" class="btn btn-primary">Bye now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+

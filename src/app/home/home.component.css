@@ -1,0 +1,87 @@
+.carousel-inner{
+    border-radius: 5px !important;
+}
+.myCata{
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-bar {
+    background-color: #f2f2f200;
+    padding: 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .top-bar {
+      flex-direction: row-reverse;
+      font-size: small;
+      padding: 0px;
+      height: 80px;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .car-header{
+        margin-top: 25px;
+        margin-left: 80px;
+    }
+  }
+  
+  .cata-style{
+    /* background: linear-gradient(540deg, rgba(255, 255, 255, 0.257), transparent, rgba(255, 255, 255, 0.273)); */
+    /* border-bottom: 2px solid black; */
+    border-radius: 4px;
+    height: 80px;
+    margin-top: 50px;
+    margin-bottom: -13px;
+    /* background-color: #120f1e; */
+    /* color: aliceblue; */
+    padding: 5px;
+  }
+  .car-header{
+    margin-top: 41px;
+    margin-left: 200px;
+  }
+  #jump-page:hover{
+cursor: pointer;
+color: blueviolet;
+  }
