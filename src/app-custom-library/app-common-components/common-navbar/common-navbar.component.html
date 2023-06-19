@@ -38,18 +38,7 @@
       </div>
     </ng-template>
     <span class="navbar-text">
-      <button 
-        type="button" 
-        class="btn btn-primary custom-button-signup"
-        routerLink="/user-Auth">
-        Signup
-      </button>
-      <button
-        type="button"
-        class="btn btn-outline-primary custom-button-login"
-        routerLink="/user-Auth">
-        Login
-      </button>
+      <app-app-common-button [buttonConfig]="buttonConfig"></app-app-common-button>
     </span>
   </div>
 </nav>

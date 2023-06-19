@@ -33,11 +33,21 @@
     margin-right: 5px;
 }
 
+.custom-button-signup:hover {
+    background: #ffffff !important;
+    border-color: #ffca22 !important;
+    color: #ffca22 !important;
+    margin-right: 5px;
+}
+
 .custom-button-login{
     color: #ffca22 !important;
     border-color: #ffca22 !important;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
 .bottom-border {
     border-bottom: 1px solid #b9b9b9;;
 }
+
+
