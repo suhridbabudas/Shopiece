@@ -11,11 +11,6 @@ body {
   }
   
   /* Other Classes for Page Styling */
-  
-  body {
-    background: #007bff;
-    background: linear-gradient(to bottom, #ffffff, rgb(120, 120, 120));
-  }
 
   #drop{
     left: -131px !important;
