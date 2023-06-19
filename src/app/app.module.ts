@@ -13,6 +13,7 @@ import { HomeFashionComponent } from './home/SubType/home-fashion/home-fashion.c
 import { HomeElectronicsComponent } from './home/SubType/home-electronics/home-electronics.component';
 import { HomeFoodsComponent } from './home/SubType/home-foods/home-foods.component';
 import { HomeEntertainmentComponent } from './home/SubType/home-entertainment/home-entertainment.component';
+import { AppCustomLibraryModule } from 'src/app-custom-library/app-custom-library.module';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { HomeEntertainmentComponent } from './home/SubType/home-entertainment/ho
 
   ],
   imports: [
+    AppCustomLibraryModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     NgbDatepickerModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
 
   ],
   providers: [ 

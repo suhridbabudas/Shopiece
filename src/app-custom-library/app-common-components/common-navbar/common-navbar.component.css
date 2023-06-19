@@ -1,0 +1,43 @@
+.logo-size {
+    height: 55px ;
+    width: 55px;
+    margin-inline-end: 10px;
+  }
+
+.navbar-brand {
+    display: contents;
+}
+
+#logo-text{
+    margin-bottom: 0rem !important;
+    font-weight: bolder;
+}
+
+#navbarText{
+    margin-inline-start: 5% !important;
+}
+
+.nav-link{
+    font-size: large;
+    margin-right: 7px;
+}  
+
+.navbar-text{
+    font-weight: bolder;
+}
+
+.custom-button-signup{
+    background: #2b2b2c !important;
+    border-color: #2b2b2c !important;
+    color: #ffca22 !important;
+    margin-right: 5px;
+}
+
+.custom-button-login{
+    color: #ffca22 !important;
+    border-color: #ffca22 !important;
+}
+
+.bottom-border {
+    border-bottom: 1px solid #b9b9b9;;
+}

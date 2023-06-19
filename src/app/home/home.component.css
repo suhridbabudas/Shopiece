@@ -6,6 +6,9 @@
     margin-left: 59px;
     margin-top: 14px;
 }
+li{
+  margin-left: 0px !important;
+}
 
 body {
     margin: 0;
@@ -13,18 +16,18 @@ body {
   }
   
   .top-bar {
-    background-color: #f2f2f200;
-    padding: 2px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-right: 80px;
     text-align: center;
+  }
+
+  .space-between-types {
+    margin-right: 30px !important;
   }
   
   .logo {
-    font-size: 20px;
+    height: 60px ;
+    width: 60px;
   }
   
   nav ul {
@@ -67,15 +70,9 @@ body {
   }
   
   .cata-style{
-    /* background: linear-gradient(540deg, rgba(255, 255, 255, 0.257), transparent, rgba(255, 255, 255, 0.273)); */
-    /* border-bottom: 2px solid black; */
-    border-radius: 4px;
     height: 80px;
     margin-top: 50px;
     margin-bottom: -13px;
-    /* background-color: #120f1e; */
-    /* color: aliceblue; */
-    padding: 5px;
   }
   .car-header{
     margin-top: 41px;

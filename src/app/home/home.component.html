@@ -1,82 +1,89 @@
-
-
 <div class="row">
-	<div class="col-lg-4">
-		<div class="" style="border:1px solid grey">
-			<ngb-carousel
-			  class="carousel-inner flex-shrink-0"
-			  #carousel
-			  [interval]="4000"
-			  [pauseOnHover]="pauseOnHover"
-			  [pauseOnFocus]="pauseOnFocus"
-			  (slide)="onSlide($event)"
-			>
-			  <ng-template  ngbSlide *ngFor="let product of allProd; index as i">
-				<div class="carousel-caption" (click)="onProductDetails(product.id)">
-				  <small  style="background-color: rgba(210, 210, 210, 0.951); color: black;border-radius: 10px;padding: 10px;">{{product.Name}}</small>
-				</div>
-				
-				  <div class="picsum-img-wrapper">
-					<img
-					  src="{{product.ProductImageUrl}}"
-					  alt="My image {{ i + 1 }} description"
-					  width="100%"
-					  height="200px"
-					/>
-				  </div>
-			  
-			  </ng-template>
-			</ngb-carousel>
-		  </div>
-	</div>
-	<div class="col-lg-8">
-	<div class="car-header">
-		<h2>Welcome to <strong>Shopies</strong></h2>
-	</div>
-	<div class="cata-style">
+  <div class="col-lg-7">
+	<div>
+		<h2>Shopies</h2>
+	  </div>
+	  <div class="cata-style">
 		<div class="top-bar">
-			<nav *ngFor="let type of productType">
-			  <ul >
-				<li>
-				  <a routerLink="{{type.URL}}"
-					><img
-					  class="card-img-top"
-					  src="{{type.TypeImgURL}}"
-					  height="30px"
-					  width="30px"
-					  style="border-radius: 50%; width: 50px"
-				  /></a>
+		  <nav class="space-between-types" *ngFor="let type of productType">
+			<ul>
+			  <li>
+				<a routerLink="{{ type.URL }}"
+				  ><img class="card-img-top logo" src="{{ type.TypeImgURL }}" />
+				  <h5>{{ type.TypeName }}</h5>
+				</a>
 			  </li>
-		  </ul>
-		  <small align="center" routerLink="{{type.URL}}" id="jump-page">{{ type.TypeName }}</small>
-			</nav>
-		  </div>
-	</div>
-	</div>
+			</ul>
+			<!-- <h5 align="center" routerLink="{{ type.URL }}" id="jump-page">
+			  {{ type.TypeName }}
+			</h5> -->
+		  </nav>
+		</div>
+	  </div>
+  </div>
+  <div class="col-lg-5">
+    <div style="border: 1px solid grey">
+		<ngb-carousel
+		  class="carousel-inner flex-shrink-0"
+		  #carousel
+		  [interval]="5000"
+		  [pauseOnHover]="pauseOnHover"
+		  [pauseOnFocus]="pauseOnFocus"
+		  (slide)="onSlide($event)"
+		>
+		  <ng-template ngbSlide *ngFor="let product of allProd; index as i">
+			<div class="carousel-caption" (click)="onProductDetails(product.id)">
+			  <small
+				style="
+				  background-color: rgba(210, 210, 210, 0.951);
+				  color: black;
+				"
+				>{{ product.Name }}</small
+			  >
+			</div>
+  
+			<div class="picsum-img-wrapper">
+			  <img
+				src="{{ product.ProductImageUrl }}"
+				alt="My image {{ i + 1 }} description"
+				width="100%"
+				height="300px"
+			  />
+			</div>
+		  </ng-template>
+		</ngb-carousel>
+	  </div>
+  </div>
 </div>
 
-
-
-<div
-  class="card container mt-2 mb-2 p-2"
-  style="background-color: rgba(0, 0, 0, 0.178)"
->
-<header class="modal-header">
-	<h4 class="text text-dark text-right">Our Trendy Products!</h4>
-</header>
-  <div class="row" >
+<div>
+  <header class="modal-header">
+    <h4 class="text text-dark text-right">Our Trendy Products!</h4>
+  </header>
+  <div class="row">
     <div class="col-lg-3 mt-1" *ngFor="let product of allProd">
       <div class="card" style="width: 17rem; margin-left: -8px">
         <img
           class="card-img-top"
-          src="{{product.ProductImageUrl}}"
+          src="{{ product.ProductImageUrl }}"
           height="200px"
           width="100%"
           alt="Card image cap"
         />
         <div class="card-body">
-          <h5 class="card-title" style="height: 50px;border-bottom: 1px solid rgba(128, 128, 128, 0.389);">{{product.Name}}</h5>
-          <a class="btn btn-sm border border-primary" (click)="onProductDetails(product.id)">View Details</a>
+          <h5
+            class="card-title"
+            style="
+              height: 50px;
+              border-bottom: 1px solid rgba(128, 128, 128, 0.389);
+            "
+          >
+            {{ product.Name }}
+          </h5>
+          <a
+            class="btn btn-sm border border-primary"
+            (click)="onProductDetails(product.id)"
+            >View Details</a>
         </div>
       </div>
     </div>
