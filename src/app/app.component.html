@@ -1,18 +1,5 @@
 <app-common-navbar [isUserLogin]="isUserLogin"></app-common-navbar>
-<div class="container-fluid">
+<div class="container-fluid nav-margin">
   <router-outlet></router-outlet>
 </div>
-<footer
-  id="sticky-footer"
-  class="flex-shrink-0 py-2 text-white mt-4"
-  style="background-color: rgb(56, 56, 56)"
->
-  <div class="container text-center">
-    <small
-      >Copyright &copy; Shopies. &nbsp;
-      <span style="color: rgb(255, 251, 197)"
-        >@ All rights reserve.</span
-      ></small
-    >
-  </div>
-</footer>
+<app-app-common-footer></app-app-common-footer>
